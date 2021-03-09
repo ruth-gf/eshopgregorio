@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout/layout::head">
+    <meta charset="UTF-8">
+</head>
+<body>
+<div align="center">
+    <h1>Lista Usuarios</h1>
+    <a href="alta">Alta usuario</a>
+    <br/><br/>
+    <table border="1" cellpadding="10">
+        <thead>
+            <tr>
+                <th>Num</th>
+                <th>Nombre</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="usuario : ${listaNombres}">
+                <td th:text="${usuario.nombre}">Nombre</td>
+                <td th:text="${usuario.apellidos}">Apellidos</td>
+                
+            </tr>
+        </tbody>
+    </table>
+</div>  
+</body>
+</html>
